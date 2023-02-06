@@ -1,0 +1,277 @@
+
+/* Remove padding and margin */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    background-color: $wisteria;
+    color: $coffee;
+    overflow-x: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.margin {
+    margin: 0 300px;
+}
+
+.wrapper {
+    min-height: calc(100vh - 50px);
+}
+
+footer {
+    height: 50px;
+}
+
+.header-line {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: $amaranth;
+    border-bottom: 2px solid $coffee;
+}
+
+.footer-line {
+    display: block;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: $amaranth;
+    border-top: 2px solid $coffee;
+}
+
+.site-header {
+    display: block;
+    text-align: center;
+    font-size: 48px;
+}
+
+.site-desc {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card {
+    position: relative;
+    height: auto;
+    width: 300px;
+    padding: 20px;
+    color: $columbia;
+    border-radius: 3px;
+    border: 1px solid $columbia;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: $amaranth;
+}
+
+#email {
+    width: auto;
+    height: auto;
+    background-color: rgba($magenta, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px 70px 10px 10px;
+    margin: 10px 0;
+    color: $columbia
+}
+
+#email::placeholder {
+    color: $columbia;
+    font-family: 'Quicksand', sans-serif;;
+}
+
+.image {
+    position: relative;
+}
+
+.image p {
+    margin-bottom: 10px;
+}
+
+.image-save {
+    height: 250px;
+    width: 250px;
+}
+
+.btn-refresh {
+    position: absolute;
+    left: 20px;
+    top: 341px;
+    width: 250px;
+    height: auto;
+    color: $columbia;
+    background-color: $magenta;
+    font-size: 20px;
+    padding: 5px 0;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    z-index: 12;
+    border-right:  1px solid $columbia;
+    border-bottom: 1px solid $columbia;
+    border-left:   1px solid $columbia;
+}
+
+.btn-save {
+    width: 250px;
+    height: auto;
+    color: $coffee;
+    background-color: $columbia;
+    border: 1px solid rgba($coffee, 0.2);
+    font-size: 20px;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10px;
+}
+
+.card2 {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    color: $columbia;
+    border-radius: 3px;
+    border: 1px solid $columbia;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: $amaranth;
+}
+
+.nothing-saved {
+    background-color: $magenta;
+    text-transform: uppercase;
+    text-align: center;
+    width: auto;
+    height: auto;
+    color: $columbia;
+    padding: 20px 0px;
+}
+
+.instructions {
+    background-color: $wisteria;
+    color: $coffee;
+    padding: 20px 20px 20px 40px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.newest {
+    order: -1;
+}
+
+#user-message {
+    display: block;
+    width: 100%;
+    color: $wisteria;
+    text-align: center;
+    font-size: 24px;
+    background-color: #FF9494;
+    padding: 10px 0;
+    border: 1px solid $columbia;
+}
+
+#imageoutput {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: $magenta;
+}
+
+#imageoutput ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#imageoutput ul li {
+    margin: 5px 0;
+}
+
+#imageoutput ul > li > ul {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    list-style: none;
+}
+
+#imageoutput ul li > ul > li {
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid $columbia;
+}
+
+h4 {
+    color: $columbia;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+    .margin {
+        margin: 0 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .margin {
+        margin: 0;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-refresh {
+        width: 94%;
+    }
+    .btn-save {
+        width: 100%;
+    }
+    .image-save {
+        width: 100%;
+    }
+    #email {
+        width: 100%;
+    }
+    h4 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn-refresh {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .btn-refresh {
+        width: 88%;
+    }
+}

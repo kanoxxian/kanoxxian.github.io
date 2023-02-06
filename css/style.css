@@ -1,0 +1,283 @@
+/* Remove padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  background-color: #dee7e7;
+  color: #4D616C;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.margin {
+  margin: 0 300px;
+}
+
+.wrapper {
+  min-height: calc(100vh - 50px);
+}
+
+footer {
+  height: 50px;
+}
+
+.header-line {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: #535657;
+  border-bottom: 2px solid #4D616C;
+}
+
+.footer-line {
+  display: block;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: #535657;
+  border-top: 2px solid #4D616C;
+}
+
+.site-header {
+  display: block;
+  text-align: center;
+  font-size: 48px;
+}
+
+.site-desc {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.card {
+  position: relative;
+  height: auto;
+  width: 300px;
+  padding: 20px;
+  color: #f4faff;
+  border-radius: 3px;
+  border: 1px solid #f4faff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #535657;
+}
+
+#email {
+  width: auto;
+  height: auto;
+  background-color: rgba(183, 173, 207, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px 70px 10px 10px;
+  margin: 10px 0;
+  color: #f4faff;
+}
+
+#email::-moz-placeholder {
+  color: #f4faff;
+  font-family: "Quicksand", sans-serif;
+}
+
+#email:-ms-input-placeholder {
+  color: #f4faff;
+  font-family: "Quicksand", sans-serif;
+}
+
+#email::placeholder {
+  color: #f4faff;
+  font-family: "Quicksand", sans-serif;
+}
+
+.image {
+  position: relative;
+}
+
+.image p {
+  margin-bottom: 10px;
+}
+
+.image-save {
+  height: 250px;
+  width: 250px;
+}
+
+.btn-refresh {
+  position: absolute;
+  left: 20px;
+  top: 341px;
+  width: 250px;
+  height: auto;
+  color: #f4faff;
+  background-color: #b7adcf;
+  font-size: 20px;
+  padding: 5px 0;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  z-index: 12;
+  border-right: 1px solid #f4faff;
+  border-bottom: 1px solid #f4faff;
+  border-left: 1px solid #f4faff;
+}
+
+.btn-save {
+  width: 250px;
+  height: auto;
+  color: #4D616C;
+  background-color: #f4faff;
+  border: 1px solid rgba(77, 97, 108, 0.2);
+  font-size: 20px;
+  padding: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 10px;
+}
+
+.card2 {
+  height: auto;
+  width: 100%;
+  padding: 20px;
+  color: #f4faff;
+  border-radius: 3px;
+  border: 1px solid #f4faff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #535657;
+}
+
+.nothing-saved {
+  background-color: #b7adcf;
+  text-transform: uppercase;
+  text-align: center;
+  width: auto;
+  height: auto;
+  color: #f4faff;
+  padding: 20px 0px;
+}
+
+.instructions {
+  background-color: #dee7e7;
+  color: #4D616C;
+  padding: 20px 20px 20px 40px;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.newest {
+  order: -1;
+}
+
+#user-message {
+  display: block;
+  width: 100%;
+  color: #dee7e7;
+  text-align: center;
+  font-size: 24px;
+  background-color: #FF9494;
+  padding: 10px 0;
+  border: 1px solid #f4faff;
+}
+
+#imageoutput {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #b7adcf;
+}
+
+#imageoutput ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#imageoutput ul li {
+  margin: 5px 0;
+}
+
+#imageoutput ul > li > ul {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  list-style: none;
+}
+
+#imageoutput ul li > ul > li {
+  max-width: 100%;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid #f4faff;
+}
+
+h4 {
+  color: #f4faff;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+  .margin {
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .margin {
+    margin: 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-refresh {
+    width: 94%;
+  }
+  .btn-save {
+    width: 100%;
+  }
+  .image-save {
+    width: 100%;
+  }
+  #email {
+    width: 100%;
+  }
+  h4 {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn-refresh {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .btn-refresh {
+    width: 88%;
+  }
+}/*# sourceMappingURL=style.css.map */
