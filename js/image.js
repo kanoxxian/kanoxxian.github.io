@@ -5,6 +5,7 @@ const form = document.getElementById("form");
 const pic = document.getElementById("image-save");
 const imageoutput = document.getElementById("imageoutput");
 const save_btn = document.querySelector('.btn-save');
+const refrsh_btn = document.querySelector('.btn-refresh');
 const hide = document.getElementById("nothing-saved");
 const show = document.getElementById("user-message");
 let url = "";
@@ -56,6 +57,7 @@ function setOnGoing(email) {
 
 // Email validation function
 function checkMail(email) {
+    show.classList.remove('email-error')
     return validEmail.test(email);
 }
 
@@ -70,6 +72,7 @@ form.addEventListener("submit", function(event) {
     infoMsg.innerHTML = "";
     let email = document.getElementById("email").value;
     if (!checkMail(email)) {
+        show.classList.add('email-error')
         infoMsg.innerHTML = "Please enter a valid email address";
         return;
     } 
@@ -100,11 +103,17 @@ form.addEventListener("submit", function(event) {
         console.log(`${email} and ${thisImage} have been added to the array`);
         imagelist();
         infoMsg.innerHTML = "New picture added";
+        show.classList.add('added-image');
     }
 });
 
 save_btn.addEventListener('click', function() {
     hide.classList.add('hidden');
     show.classList.remove('opacity');
+    show.classList.remove('added-image');
 });
 
+refrsh_btn.addEventListener('click', function() {
+    hide.classList.remove('hidden');
+    show.classList.add('opacity');
+});

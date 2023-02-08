@@ -131,6 +131,9 @@ footer {
   border-bottom: 1px solid #f4faff;
   border-left: 1px solid #f4faff;
 }
+.btn-refresh:hover {
+  background: #9b8dbc;
+}
 
 .btn-save {
   width: 250px;
@@ -144,6 +147,19 @@ footer {
   border-radius: 5px;
   font-family: "Quicksand", sans-serif;
   margin-top: 10px;
+}
+.btn-save:hover {
+  background: #c1e3ff;
+}
+
+.email-error {
+  border: 2px solid red !important;
+  color: red !important;
+}
+
+.added-image {
+  color: #C1E1C1 !important;
+  border: 2px solid #C1E1C1 !important;
 }
 
 .card2 {
@@ -202,7 +218,7 @@ footer {
 
 #imageoutput ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 #imageoutput ul li {
@@ -235,6 +251,10 @@ h4 {
   margin-left: 50px;
   margin-bottom: 10px;
   font-weight: 300;
+}
+
+.newest {
+  order: 1;
 }
 
 @media screen and (max-width: 1200px) {

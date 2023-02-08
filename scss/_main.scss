@@ -121,6 +121,9 @@ footer {
     border-right:  1px solid $columbia;
     border-bottom: 1px solid $columbia;
     border-left:   1px solid $columbia;
+    &:hover {
+        background: darken($magenta, 10%);
+    }
 }
 
 .btn-save {
@@ -135,6 +138,19 @@ footer {
     border-radius: 5px;
     font-family: 'Quicksand', sans-serif;
     margin-top: 10px;
+    &:hover {
+        background: darken($columbia, 10%);
+    }
+}
+
+.email-error {
+    border: 2px solid red !important;
+    color: red !important;
+}
+
+.added-image {
+    color: #C1E1C1 !important;
+    border: 2px solid #C1E1C1 !important;
 }
 
 .card2 {
@@ -193,7 +209,7 @@ footer {
 
 #imageoutput ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 #imageoutput ul li {
@@ -226,6 +242,10 @@ h4 {
     margin-left: 50px;
     margin-bottom: 10px;
     font-weight: 300;
+}
+
+.newest {
+    order: 1;
 }
 
 @media screen and (max-width: 1200px) {
