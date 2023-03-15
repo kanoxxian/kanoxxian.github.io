@@ -117,3 +117,8 @@ refrsh_btn.addEventListener('click', function() {
     hide.classList.remove('hidden');
     show.classList.add('opacity');
 });
+
+function dark() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
