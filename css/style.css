@@ -14,6 +14,10 @@ body {
   overflow-x: hidden;
 }
 
+.dark-mode {
+  background-color: black;
+}
+
 .hidden {
   display: none;
 }
@@ -87,11 +91,6 @@ footer {
 }
 
 #email::-moz-placeholder {
-  color: #f4faff;
-  font-family: "Quicksand", sans-serif;
-}
-
-#email:-ms-input-placeholder {
   color: #f4faff;
   font-family: "Quicksand", sans-serif;
 }
